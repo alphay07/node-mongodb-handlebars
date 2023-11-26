@@ -39,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(database.url);
 
+
+
 // Route to display sortingInvoices.hbs file and sort invoices
 app.get('/sortingInvoices', async (req, res) => {
     try {
