@@ -1,0 +1,131 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Sorting Invoices</title>
+</head>
+<body>
+  <h1>Sorting Invoices</h1>
+
+  <form action="/sortingInvoices" method="get">
+    <label for="sortBy">Sort By:</label>
+    <select name="sortBy" id="sortBy">
+      <option value="InvoiceNo">Invoice No</option>
+      <option value="image">Image</option>
+      <option value="Manufacturer">Manufacturer</option>
+      <option value="class">Class</option>
+      <option value="Sales_in_thousands">Sales in Thousands</option>
+      <option value="__year_resale_value">Year Resale Value</option>
+      <option value="Vehicle_type">Vehicle Type</option>
+      <option value="Price_in_thousands">Price in Thousands</option>
+      <option value="Engine_size">Engine Size</option>
+      <option value="Horsepower">Horsepower</option>
+      <option value="Wheelbase">Wheelbase</option>
+      <option value="Width">Width</option>
+      <option value="Length">Length</option>
+      <option value="Curb_weight">Curb Weight</option>
+      <option value="Fuel_capacity">Fuel Capacity</option>
+      <option value="Fuel_efficiency">Fuel Efficiency</option>
+      <option value="Latest_Launch">Latest Launch</option>
+      <option value="Power_perf_factor">Power Perf Factor</option>
+    </select>
+    <button type="submit">Sort</button>
+  </form>
+
+  <table>
+    <!-- Table headers -->
+    <tr>
+      <th>InvoiceNo</th>
+      <th>Manufacturer</th>
+      <th>Price_in_thousands</th>
+      <!-- Add other headers as needed -->
+    </tr>
+
+    <!-- Display invoices -->
+    {{#each invoices}}
+    <tr>
+      <td>{{InvoiceNo}}</td>
+      <td>{{Manufacturer}}</td>
+      <td>{{Price_in_thousands}}</td>
+      <!-- Display other fields as needed -->
+    </tr>
+    {{/each}}
+  </table>
+
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorting Invoices</title>
+</head>
+<body>
+  <h1>Sorting Invoices</h1>
+
+  <form action="/sortingInvoices" method="get">
+    <label for="sortBy">Sort By:</label>
+    <select name="sortBy" id="sortBy">
+      <option value="Manufacturer">Manufacturer</option>
+      <option value="class">Class</option>
+      <option value="Sales_in_thousands">Sales in Thousands</option>
+      <option value="__year_resale_value">Year Resale Value</option>
+      <option value="Price_in_thousands">Price in Thousands</option>
+      <option value="Engine_size">Engine Size</option>
+      <option value="Horsepower">Horsepower</option>
+      <option value="Curb_weight">Curb Weight</option>
+      <option value="Fuel_capacity">Fuel Capacity</option>
+      <option value="Fuel_efficiency">Fuel Efficiency</option>
+    </select>
+    <button type="submit">Sort</button>
+  </form>
+
+  <table>
+    <!-- Table headers -->
+    <tr>
+      <th>InvoiceNo</th>
+      <th>Image</th>
+      <th>Manufacturer</th>
+      <th>Class</th>
+      <th>Sales in Thousands</th>
+      <th>Year Resale Value</th>
+      <th>Vehicle Type</th>
+      <th>Price in Thousands</th>
+      <th>Engine Size</th>
+      <th>Horsepower</th>
+      <th>Wheelbase</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Curb Weight</th>
+      <th>Fuel Capacity</th>
+      <th>Fuel Efficiency</th>
+      <th>Latest Launch</th>
+      <th>Power Perf Factor</th>
+    </tr>
+
+    <!-- Display invoices -->
+    {{#each invoices}}
+    <tr>
+      <td>{{InvoiceNo}}</td>
+        <td><img src="{{image}}" alt="{{Manufacturer}}"></td>
+      <td>{{Manufacturer}}</td>
+      <td>{{class}}</td>
+      <td>{{Sales_in_thousands}}</td>
+      <td>{{__year_resale_value}}</td>
+      <td>{{Vehicle_type}}</td>
+      <td>{{Price_in_thousands}}</td>
+      <td>{{Engine_size}}</td>
+      <td>{{Horsepower}}</td>
+      <td>{{Wheelbase}}</td>
+      <td>{{Width}}</td>
+      <td>{{Length}}</td>
+      <td>{{Curb_weight}}</td>
+      <td>{{Fuel_capacity}}</td>
+      <td>{{Fuel_efficiency}}</td>
+      <td>{{Latest_Launch}}</td>
+      <td>{{Power_perf_factor}}</td>
+    </tr>
+    {{/each}}
+  </table>
+
+</body>
+</html>
+

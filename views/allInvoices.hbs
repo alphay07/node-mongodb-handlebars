@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Invoices</title>
+</head>
+<body>
+  <h1>All Invoices</h1>
+  <table>
+    <tr><th>InvoiceNo</th>
+        <th>image</th>
+        <th>Manufacturer</th>
+        <th>class</th>
+        <th>Sales_in_thousands</th>
+        <th>__year_resale_value</th>
+        <th>Vehicle_type</th>
+        <th>Price_in_thousands</th>
+        <th>Engine_size</th>
+        <th>Horsepower</th>
+        <th>Wheelbase</th>
+        <th>Width</th>
+        <th>Length</th>
+        <th>Curb_weight</th>
+        <th>Fuel_capacity</th>
+        <th>Fuel_efficiency</th>
+        <th>Latest_Launch</th>
+        <th>Power_perf_factor</th></tr>
+     {{#each invoices}}
+
+    <tr><td>{{InvoiceNo}}</td>
+        <td><img src="{{image}}" alt="{{Manufacturer}}"></td>
+        <td>{{Manufacturer}}</td>
+        <td>{{class}}</td>
+        <td>{{Sales_in_thousands}}</td>
+        <td>{{__year_resale_value}}</td>
+        <td>{{Vehicle_type}}</td>
+        <td>{{Price_in_thousands}}</td>
+        <td>{{Engine_size}}</td>
+        <td>{{Horsepower}}</td>
+        <td>{{Wheelbase}}</td>
+        <td>{{Width}}</td>
+        <td>{{Length}}</td>
+        <td>{{Curb_weight}}</td>
+        <td>{{Fuel_capacity}}</td>
+        <td>{{Fuel_efficiency}}</td>
+        <td>{{Latest_Launch}}</td>
+        <td>{{Power_perf_factor}}</td></tr>
+{{/each}}
+  </table>
+
+  <h2>Insert New Invoice</h2>
+  <form action="/insertInvoice" method="post">
+    <input type="text" name="InvoiceNo" placeholder="Invoice No">
+    <input type="text" name="image" placeholder="Image URL">
+    <input type="text" name="Manufacturer" placeholder="Manufacturer">
+    <input type="text" name="class" placeholder="Class">
+    <input type="number" name="Sales_in_thousands" placeholder="Sales in thousands">
+    <input type="number" name="__year_resale_value" placeholder="Year Resale Value">
+    <input type="text" name="Vehicle_type" placeholder="Vehicle Type">
+    <input type="number" name="Price_in_thousands" placeholder="Price in thousands">
+    <input type="number" name="Engine_size" placeholder="Engine Size">
+    <input type="number" name="Horsepower" placeholder="Horsepower">
+    <input type="number" name="Wheelbase" placeholder="Wheelbase">
+    <input type="number" name="Width" placeholder="Width">
+    <input type="number" name="Length" placeholder="Length">
+    <input type="number" name="Curb_weight" placeholder="Curb Weight">
+    <input type="number" name="Fuel_capacity" placeholder="Fuel Capacity">
+    <input type="number" name="Fuel_efficiency" placeholder="Fuel Efficiency">
+    <input type="text" name="Latest_Launch" placeholder="Latest Launch">
+    <input type="number" name="Power_perf_factor" placeholder="Power Perf Factor">
+    <button type="submit">Insert Invoice</button>invoices
+</form>
+
+</body>
+</html>
