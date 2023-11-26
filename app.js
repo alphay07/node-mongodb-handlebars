@@ -19,6 +19,11 @@ const port = process.env.PORT || 8000;
 // Create a handlebars instance
 const hbs = exphbs.create();
 
+// Define the route to render the index view
+app.get('/', function(req, res) {
+    res.render('index', { title: 'Assignment 4' });
+  });
+
 // Define the handlebars engine with the specified configuration
 app.engine('.hbs', exphbs.engine({
     extname: '.hbs',
